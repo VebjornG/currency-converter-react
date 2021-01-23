@@ -13,7 +13,7 @@ Run this command after you've cd'd into the cloned
 folder. This runs the app in the development mode.  
 Open http://localhost:3000 to view it in the browser.
 
-Once rendered result will look like the image below.  
+Once rendered the result will look like the image below.  
 One can easily switch background image in `index.css`
 by going to [Unsplash](https://unsplash.com) and copy  
 the equivalent of the link that is already there.  
