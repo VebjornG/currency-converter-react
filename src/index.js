@@ -1,15 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import ConvertCurrency from "./components/ConvertCurrency"
-
-function App() {
-  return (
-    <div className="App">
-      <ConvertCurrency />
-    </div>
-  );
-}
+import App from "./App"
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
