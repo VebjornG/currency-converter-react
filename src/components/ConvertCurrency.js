@@ -122,8 +122,8 @@ function ConvertCurrency() {
                             value={exchangeRate} 
                         />
                         <div className="btn"
-                            onClick={async () => {
-                                await Convert()
+                            onClick={() => {
+                                Convert()
                                 setMessage(`${fromCurrency} ${amount} converts to ${toCurrency} ${result}`)     
                             }}
                         >
