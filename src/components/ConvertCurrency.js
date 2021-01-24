@@ -24,8 +24,6 @@ function ConvertCurrency() {
 
     // Handles the conversion event
     const Convert = () => {
-        //fromCurrency !== toCurrency ? 
-
         fetch(`https://api.exchangeratesapi.io/latest?base=${fromCurrency}&symbols=${toCurrency}`)
             .then(res => res.json())
             .then(data => {
@@ -34,10 +32,7 @@ function ConvertCurrency() {
                 setExchangeRate(data.rates[toCurrency].toFixed(3))
             })
             .catch(error => {console.log("Oops", error.message)}) 
-        
-                
-            //: setResult("The currencies are identical, choose ones that differ from one another.")
-    }
+    } 
 
     // The states are updated by this function based on the currencies the user selects
     const Select = (e) => {
@@ -51,8 +46,7 @@ function ConvertCurrency() {
         }
     }
 
-
-    // Switch currencies (and calculate new exchange rate?)
+    // Switch currencies and calculate new exchange rate
     const Switch = () => {
         if (toCurrency) {
             setToCurrency(fromCurrency)
@@ -60,12 +54,6 @@ function ConvertCurrency() {
             Convert()
             setMessage(`${toCurrency} ${amount} converts to ${fromCurrency} ${result}`) 
         } 
-        //if (fromCurrency) {
-        //    setFromCurrency(toCurrency)
-        //}
-        
-
-        
     }
     
     
@@ -116,7 +104,6 @@ function ConvertCurrency() {
                         </div>
                         <label>Exchange rate</label>
                         <input
-                            
                             className="exchange-rate"
                             placeholder="Exchange rate"
                             value={exchangeRate} 
